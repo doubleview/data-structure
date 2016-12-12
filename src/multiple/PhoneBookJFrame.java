@@ -29,14 +29,14 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
-/*
+/**
  * 电话簿窗口类
  */
 public class PhoneBookJFrame extends JFrame implements ListSelectionListener,
 		ActionListener, WindowListener {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private PhoneBookTreeSet book;// 电话簿，使用一个树集合存储所有Friend对象
@@ -226,15 +226,15 @@ public class PhoneBookJFrame extends JFrame implements ListSelectionListener,
 		if (e.getActionCommand().equals("按姓名查找")) {
 			if (!this.book.isEmpty()
 					&& book.search(
-							new Friend(
-									(String) combobox_name.getSelectedItem(),
-									""), new NameComparator()) != null) {
+					new Friend(
+							(String) combobox_name.getSelectedItem(),
+							""), new NameComparator()) != null) {
 				for (int i = this.tableModel.getRowCount() - 1; i >= 0; i--)
 					// 清空表格
 					this.tableModel.removeRow(i);
 
 				this.addAll(new Friend(
-						(String) combobox_name.getSelectedItem(), ""),
+								(String) combobox_name.getSelectedItem(), ""),
 						new NameComparator());
 			} else
 				JOptionPane.showMessageDialog(this, "没有查找到!");
@@ -243,7 +243,7 @@ public class PhoneBookJFrame extends JFrame implements ListSelectionListener,
 		if (e.getActionCommand().equals("按电话号码查找")) {
 			if (!this.book.isEmpty()
 					&& book.search(new Friend("", text_code.getText()),
-							new CodeComparator()) != null) {
+					new CodeComparator()) != null) {
 				for (int i = this.tableModel.getRowCount() - 1; i >= 0; i--)
 					// 清空表格
 					this.tableModel.removeRow(i);

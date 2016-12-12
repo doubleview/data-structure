@@ -9,7 +9,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
 
-/*
+/**
  * 电话簿存储与管理类
  */
 public class PhoneBookTreeSet extends TreeSet<Friend> {
