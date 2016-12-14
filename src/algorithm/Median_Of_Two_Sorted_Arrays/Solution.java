@@ -81,11 +81,53 @@ public class Solution {
 
     /**
      * 个人解法
-     * @param A
-     * @param B
+     * @param nums1
+     * @param nums2
      * @return
      */
-    public static double findMedianSortedArrays2(int[] A, int[] B) {
+    public static double findMedianSortedArrays2(int[] nums1, int[] nums2) {
+        int mposition = (nums1.length + nums2.length)/2;
+        int max1 = -1;
+        int max2 = -1;
+        int m = -1;
+        int n = -1;
+        while(m < nums1.length && n < nums2.length && m+n +1 != mposition){
+            if(m + 1 == nums1.length){
+                n++;
+                max2 = max1;
+                max1 = nums2[n];
+            }else if(n + 1== nums2.length){
+                m++;
+                max2 = max1;
+                max1 = nums1[m];
+            }else if(nums1[m+1] < nums2[n+1]){
+                m++;
+                if(nums1[m] > max1){
+                    max2 = max1;
+                    max1 = nums1[m];
+                }else {
+                    max2 = Math.max(max2 , nums1[m]);
+                }
+            }else {
+                n++;
+                if(nums2[n] > max1){
+                    max2 = max1;
+                    max1 = nums2[n];
+                }else {
+                    max2 = Math.max(max2 , nums2[n]);
+                }
+            }
+        }
+        if((nums1.length + nums2.length)%2 != 0){
+            return  max1;
+        }else {
+            return ((double)max1 + (double)max2)/2;
+        }
+    }
+
+
+
+    public static double findMedianSortedArrays3(int[] A, int[] B) {
         int m = A.length, n = B.length;
         int l = (m + n + 1) / 2;
         int r = (m + n + 2) / 2;
