@@ -12,7 +12,6 @@ Given n non-negative integers a1, a2, ..., an, where each represents a point at 
 
 public class Soution {
 
-
     public static void main(String[] args) {
         System.out.println(maxArea(new int[]{1 , 2 , 3 , 4}));
         System.out.println(maxArea(new int[]{0  ,2}));

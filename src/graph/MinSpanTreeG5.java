@@ -13,7 +13,7 @@ public class MinSpanTreeG5 {
 				new Edge(2, 4, 7), new Edge(2, 3, 18), new Edge(3, 0, 22),
 				new Edge(3, 2, 18), new Edge(3, 2, 18), new Edge(3, 4, 9),
 				new Edge(4, 1, 3), new Edge(4, 2, 7), new Edge(4, 3, 9) };
-		AdjMatrixGraph<String> graph = new AdjMatrixGraph<String>(vertices,
+		AdjMatrixGraph<String> graph = new AdjMatrixGraph<>(vertices,
 				edges);
 		System.out.println("带权无向图G5，" + graph.toString());
 		graph.minSpanTree_prim();// 构造带权图最小生成树的普利姆算法

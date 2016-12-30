@@ -58,7 +58,6 @@ public class Solution {
                 if (p.charAt(j) == '*') {
                     if(p.charAt(j-1) != s.charAt(i) && p.charAt(j-1) != '.'){
                         dp[i+1][j+1] = dp[i+1][j-1];
-                        System.out.println(dp[i+1][j+1]);
                     }else {
                         dp[i+1][j+1] = (dp[i+1][j] || dp[i][j+1] || dp[i+1][j-1]);
                     }
