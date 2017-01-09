@@ -24,7 +24,7 @@ public class GenLiat_String {
 	// 返回从gliststr[i]开始的子串创建的子广义表，递归算法
 	private static GenList<String> create(String gliststr) {
 		i++;// 跳过''(
-		GenList<String> glist = new GenList<String>();// 构造空广义表，只有头结点
+		GenList<String> glist = new GenList<>();// 构造空广义表，只有头结点
 		GenListNode<String> p = glist.head;// 指向头结点
 		while (i < gliststr.length()) {
 			char ch = gliststr.charAt(i);
