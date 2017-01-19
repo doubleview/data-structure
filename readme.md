@@ -2,7 +2,6 @@
 #### 此项目是基于java语言的关于数据结构的所有代码实现以及leetcode算法示例
 
 ## 结构
-* agorithm leetcode算法示例
 
 * array--数组和广义表
 
@@ -21,3 +20,5 @@
 * string--串
 
 * tree--树
+
+* agorithm leetcode算法示例
