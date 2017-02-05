@@ -27,6 +27,11 @@ public class Solution {
         System.out.println(new Solution().permute(nums));
     }
 
+    /**
+     * ÍÆ¼ö½â·¨
+     * @param nums
+     * @return
+     */
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
         // Arrays.sort(nums); // not necessary
