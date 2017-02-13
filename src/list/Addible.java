@@ -5,8 +5,8 @@ package list;
  */
 public interface Addible<T> {
 
-	public void add(T t);
+	void add(T t);
 
-	public boolean removeable();
+	boolean removeable();
 	
 }

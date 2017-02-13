@@ -5,7 +5,7 @@ package graph;
  */
 public interface GGraph<T> {
 
-	public static final int MAX_WEIGHT = 99999;// 最大权值
+	int MAX_WEIGHT = 99999;// 最大权值
 
 	int vertexCount();// 返回顶点数
 

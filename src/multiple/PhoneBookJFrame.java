@@ -257,7 +257,7 @@ public class PhoneBookJFrame extends JFrame implements ListSelectionListener,
 
 	// 列表框的选择事件处理方法
 	public void valueChanged(ListSelectionEvent e) {
-		String surname = (String) list.getSelectedValue();// 返回列表框选中数据项对象
+		String surname = list.getSelectedValue();// 返回列表框选中数据项对象
 		if (!this.book.isEmpty() && surname != null && surname != "") {// 以选中姓氏更新表格
 			for (int i = this.tableModel.getRowCount() - 1; i >= 0; i--)
 				// 清空表格
