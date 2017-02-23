@@ -1,8 +1,8 @@
 package leetcode_algorithm.Insert_Interval;
 
-import sun.security.tools.keytool.Resources_sv;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
