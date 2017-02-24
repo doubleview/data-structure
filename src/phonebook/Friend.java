@@ -1,4 +1,4 @@
-package multiple;
+package phonebook;
 
 import java.io.Serializable;
 import java.util.Comparator;
@@ -13,33 +13,33 @@ public class Friend implements Comparable<Friend>, Comparator<Friend>,	Serializa
 	 */
 	
 	private static final long serialVersionUID = 1L;
-	String name, phonecode;// 姓名，电话号码
+    String name, phonecode;// 姓名，电话号码
 
 	public Friend(String name, String phonecode) {
 		this.name = name;
 		this.phonecode = phonecode;
 	}
 
-	public Object[] toArray() {// 返回包含对象的所有成员变量的数组
-		Object[] vars = new Object[2];
-		vars[0] = this.name;
+    public Object[] toArray() {// 返回包含对象的所有成员变量的数组
+        Object[] vars = new Object[2];
+        vars[0] = this.name;
 		vars[1] = this.phonecode;
 		return vars;
 	}
 
-	public String index() {// 索引函数，以姓氏为索引
-		return this.name.substring(0, 1);
-	}
+    public String index() {// 索引函数，以姓氏为索引
+        return this.name.substring(0, 1);
+    }
 
-	public int compare(Friend f1, Friend f2) {// 比较两个对象大小
-		return f1.name.compareTo(f2.name);
-	}
+    public int compare(Friend f1, Friend f2) {// 比较两个对象大小
+        return f1.name.compareTo(f2.name);
+    }
 
-	public int compareTo(Friend f) {// 比较两个对象大小，实现comparable接口
-		if (!this.name.equals(f.name))
-			return f.name.compareTo(this.name);
-		return f.phonecode.compareTo(this.phonecode);// 仅比较姓名
-	}
+    public int compareTo(Friend f) {// 比较两个对象大小，实现comparable接口
+        if (!this.name.equals(f.name))
+            return f.name.compareTo(this.name);
+        return f.phonecode.compareTo(this.phonecode);// 仅比较姓名
+    }
 }
 
 // 比较姓氏字符串
