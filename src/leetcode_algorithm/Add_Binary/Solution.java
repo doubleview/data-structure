@@ -11,7 +11,6 @@ package leetcode_algorithm.Add_Binary;
 
 public class Solution {
 
-
     public static void main(String[] args) {
         System.out.println(new Solution().addBinary("11", "11"));
     }
