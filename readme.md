@@ -9,7 +9,7 @@
 
 * list--线性表
 
-* multiple--综合应用(利用数据结构实现联系人存储软件)
+* phonbook--综合应用(利用数据结构实现联系人存储软件)
 
 * search--查找
 
@@ -21,7 +21,7 @@
 
 * tree--树
 
-* agorithm leetcode算法示例题解
+* leetcode_agorithm leetcode算法示例题解
 
 ## 代码示例
 
