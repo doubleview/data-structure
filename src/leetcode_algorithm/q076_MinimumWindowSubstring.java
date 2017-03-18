@@ -39,7 +39,7 @@ public class q076_MinimumWindowSubstring {
             if (tmap[s.charAt(end++)]-- > 0) count--;
             while ((count == 0)) {
                 if (end - begin < minLen) minLen = end - (leftMin = begin);
-                if (tmap[s.charAt(begin++)]++ == 0) count++;
+                if (++tmap[s.charAt(begin++)] > 0) count++;
             }
         }
         return minLen == Integer.MAX_VALUE ? "" : s.substring(leftMin, leftMin + minLen);
