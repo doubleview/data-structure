@@ -29,7 +29,7 @@ public class q081_SearchInRotatedSortedArray2 {
     }
 
     /**
-     * 个人解法
+     * 解法1
      *
      * @param nums
      * @param target
