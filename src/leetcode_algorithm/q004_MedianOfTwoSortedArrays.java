@@ -1,9 +1,6 @@
 package leetcode_algorithm;
 
 
-import java.util.Arrays;
-
-
 /**
      There are two sorted arrays nums1 and nums2 of size m and n respectively.
 
@@ -59,33 +56,12 @@ public class q004_MedianOfTwoSortedArrays {
 
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      * @param nums1
      * @param nums2
      * @return
      */
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int mposition = (nums1.length + nums2.length)/2;
-        int[] array = new int[nums1.length + nums2.length];
-        System.arraycopy(nums1 , 0 , array , 0 , nums1.length);
-        System.arraycopy(nums2 , 0 , array , nums1.length , nums2.length);
-        Arrays.sort(array);
-        if ((nums1.length + nums2.length) % 2 == 0) {
-            double d1 = array[mposition - 1];
-            double d2 = array[mposition];
-            return (d1 + d2) /2;
-        }else {
-            return array[mposition];
-        }
-    }
-
-    /**
-     * 个人解法
-     * @param nums1
-     * @param nums2
-     * @return
-     */
-    public static double findMedianSortedArrays2(int[] nums1, int[] nums2) {
         int mposition = (nums1.length + nums2.length)/2;
         int max1 = -1;
         int max2 = -1;
@@ -126,8 +102,14 @@ public class q004_MedianOfTwoSortedArrays {
     }
 
 
-
-    public static double findMedianSortedArrays3(int[] A, int[] B) {
+    /**
+     * 解法2
+     *
+     * @param A
+     * @param B
+     * @return
+     */
+    public static double findMedianSortedArrays2(int[] A, int[] B) {
         int m = A.length, n = B.length;
         int l = (m + n + 1) / 2;
         int r = (m + n + 2) / 2;

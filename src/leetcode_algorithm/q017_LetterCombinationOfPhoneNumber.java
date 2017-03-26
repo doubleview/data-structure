@@ -19,6 +19,12 @@ public class q017_LetterCombinationOfPhoneNumber {
         System.out.println(letterCombinations("234"));
     }
 
+    /**
+     * ½â·¨1
+     *
+     * @param digits
+     * @return
+     */
     public static List<String> letterCombinations(String digits) {
         LinkedList<String> ans = new LinkedList<>();
         String[] mapping = new String[]{"0" , "1" , "abc" , "def" , "ghi" , "jkl" , "mno" , "pqrs" , "tuv" , "wxyz"};

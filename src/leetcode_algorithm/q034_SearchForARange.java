@@ -19,14 +19,14 @@ Given an array of integers sorted in ascending order, find the starting and endi
 public class q034_SearchForARange {
 
     public static void main(String[] args) {
-        // int[] result = new q001_TwoSum().searchRange(new int[]{5 , 7 ,7,  8 , 8 , 10} , 8);
-       // System.out.println(Arrays.toString(result));
+        //int[] result = new q001_TwoSum().searchRange(new int[]{5 , 7 ,7,  8 , 8 , 10} , 8);
+        //System.out.println(ArraySort.toString(result));
         int[] result = new q034_SearchForARange().searchRange(new int[]{1}, 1);
         System.out.println(Arrays.toString(result));
     }
 
     /**
-     * 个人解法
+     * 解法1 (个人解法)
      * @param nums
      * @param target
      * @return
@@ -51,7 +51,7 @@ public class q034_SearchForARange {
 
 
     /**
-     *
+     * 解法2
      * @param nums
      * @param target
      * @return

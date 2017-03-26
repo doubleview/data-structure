@@ -22,37 +22,11 @@ public class q015_ThreeSum {
     }
 
     /**
-     * 个人解法
+     * 解法1
      * @param nums
      * @return
      */
     public static List<List<Integer>> threeSum(int[] nums) {
-
-        if (nums.length < 3) {
-            return new ArrayList<>();
-        }
-
-        List<List<Integer>> sums = new ArrayList<>();
-
-        for (int i = 0; i < nums.length - 2 ; i++) {
-            for(int j = i+1; j < nums.length - 1 ;j++) {
-                for (int k = j + 1; k < nums.length;k++) {
-                    if (nums[i] + nums[j] + nums[k] == 0) {
-                        List<Integer> integers = new ArrayList<>();
-                        integers.add(nums[i]);
-                        integers.add(nums[j]);
-                        integers.add(nums[k]);
-                        Collections.sort(integers);
-                        if (!sums.contains(integers))
-                            sums.add(integers);
-                    }
-                }
-            }
-        }
-        return sums;
-    }
-
-    public static List<List<Integer>> threeSum2(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
 

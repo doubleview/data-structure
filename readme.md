@@ -23,139 +23,162 @@
 
 * leetcode_agorithm leetcode算法示例题解
 
-## 代码示例
+## 数据机构
 
-图的广度优先遍历
-````java
-	// 从顶点vi出发对非连通图的一次深度优先搜索遍历
-	public void DFSTraverse(int i) {
-		boolean[] visited = new boolean[this.vertexCount()];// 标记标记数组，元素初值为false
-		int j = i;
-		do {
-			if (!visited[j]) {// 若顶点Vj未被访问
-				System.out.print("{");
-				this.depthfs(j, visited);// 从顶点vi出发的一次深度优先搜索遍历
-				System.out.print("} ");
-			}
-			j = (j + 1) & this.vertexCount();// 在其他连通分量重寻找未被访问顶点
-		} while (j != i);
-		System.out.println();
-	}
+### 线性表
+线性表是最基本、最简单、也是最常用的一种数据结构。线性表中数据元素之间的关系是一对一的关系，即除了第一个和最后一个数据元素之外，其它数据元素都是首尾相接的(注意，这句话只适用大部分线性表，而不是全部。比如，循环链表逻辑层次上也是一种线性表(存储层次上属于链式存储)，但是把最后一个数据元素的尾指针指向了哨位结点)。
 
-	// 从顶点vi出发的一次深度优先搜索遍历。遍历一个连通分量
-	private void depthfs(int i, boolean[] visited) {
-		System.out.print(this.get(i) + " ");// 访问结点vi
-		visited[i] = true;// 置已访问标记
-		int j = this.getNextNeighbor(i, -1);// 获得vi的第一个邻接顶点序号
-		while (j != -1) {// 若存在邻接顶点
-			if (!visited[j])// 若邻接顶点vj未被访问
-				depthfs(j, visited);// 从vj出发的深度优先搜索遍历，递归调用
-			j = this.getNextNeighbor(i, j);// 返回vi在vj后的下一个邻接顶点序号
-		}
-	}
-````
-哈夫曼树的构造
-````java
-	public HuffmanTree(int[] weight) {
-		int n = weight.length;// n个叶子节点
-		this.leafNum = n;
-		this.huftree = new TriElement[2 * n - 1];// n个叶子节点的Huffman树共有2n-1个结点
-		// 结点数组初始化共有n个结点
-		for (int i = 0; i < n; i++)
-			this.huftree[i] = new TriElement(weight[i]);
-		for (int i = 0; i < n - 1; i++) {// 构造n-1个2度结点，每次循环构造1个2度结点
-			int min1 = Integer.MAX_VALUE, min2 = min1;// 最小和次最小权值
-			int x1 = -1, x2 = -1;// 记录两个无父母的最小权值的节点下标
-			for (int j = 0; j < n + i; j++) {
-				if (huftree[j].data < min1 && huftree[j].parent == -1) {
-					min2 = min1;
-					x2 = x1;
-					min1 = huftree[j].data;// min1记下最小权值
-					x1 = j;// x1记下最小权值结点的下标
-				} else if (huftree[j].data < min2 && huftree[j].parent == -1) {
-					min2 = huftree[j].data;
-					x2 = j;// x2记下最小权值结点的下标
-				}
-			}
-			huftree[x1].parent = n + i;// 将找出的两颗权值最小的子树合并为一颗子树
-			huftree[x2].parent = n + i;
-			this.huftree[n + i] = new TriElement(huftree[x1].data
-					+ huftree[x2].data, -1, x1, x2);
-		}
-	}
-````
+![Alt text](/res/list.png?raw=true "list")
+* **SeqList** 用数组实现的一种单链表,时间复杂度如下:
+ * 索引: `O(1)`
+ * 搜索: `O(n)`
+ * 插入: `O(n)`
+ * 移除: `O(n)`
+ 
+ ![Alt text](/res/arraylist.jpg?raw=true "SeqList")
 
-冒泡排序法和快速排序法
 
-````java
-	// 交换排序-------冒泡排序法(稳定)
-	public static void bubbleSort(int[] table) {
-		boolean exchange = true;// 是否交换的标记
-		for (int i = 1; i < table.length && exchange; i++) {// 有交换时再进行下一趟，最多n-1趟
-			exchange = false;// 假定元素未交换
-			for (int j = 0; j < table.length - 1; j++) {// 一趟比较，交换
-				if (table[j] > table[j + 1]) {
-					int temp = table[j];
-					table[j] = table[j + 1];
-					table[j + 1] = temp;
-					exchange = true;// 有交换
-				}
-			}
-		}
-	}
+* **SinglyLinkedList**  带头结点的单链表，它是由节点（Node）组成的线性集合，每个节点可以利用指针指向其他节点。时间复杂度如下:
+ * 索引: `O(n)`
+ * 搜索: `O(n)`
+ * 插入: `O(1)`
+ * 移除: `O(1)`
+ 
+  ![Alt text](/res/linkedlist.jpg?raw=true "SinglyLinkedList")
 
-	// 交换排序------------快速排序(不稳定)
-	public static void quickSort(int[] table) {
-		quickSort(table, 0, table.length - 1);
-	}
 
-	// 一趟快速排序，begin,end指定序列的下界和上界，递归算法
-	private static void quickSort(int[] table, int begin, int end) {
-		if (begin < end) {// 序列有效
-			int i = begin, j = end;
-			int vot = table[i];// 第一个值作为基准值
-			while (i != j) {// 一趟排序
-				while (i < j && vot <= table[j])
-					// 从后向前寻找最小值
-					j--;
-				if (i < j)
-					table[i++] = table[j];// 较小值向前运动
+* **SortedSinglyLinkedList** 一种可排序的单链表，它要求加入的元素必须实现Comparable接口
+* **PolySLinkedList** 一种可排序并且可与其他链表相加的一种数据结构，它实现了Addible接口
 
-				while (i < j && table[i] <= vot)
-					// 从前向后寻找较大值
-					i++;
-				if (i < j)
-					table[j--] = table[i];// 较大元素向后移动
-			}
-			table[i] = vot;// 基准值到达最终位置
-			quickSort(table, begin, j - 1);// 前端子序列再排序，递归调用
-			quickSort(table, i + 1, end);// 后端子序列再排序，递归调用
-		}
-	}
+### 栈与队列
+栈是一种先进后出的一种元素集合，其中push为入栈，pop为出栈。
+队列是一种先进先出的一种元素集合，其中enqueue为入队，dequeue为出队
 
-````
-折半查找
+![Alt text](/res/stackqueue.png?raw=true "stackqueue")
 
-````java
-	// 在从begin到end范围内，按升序排列的value数组中，折半查找关键字为key的元素
-	public static <T> int binarySearch(Comparable<T>[] value, int begin,
-			int end, T key) {
-		if (key != null)
-			while (begin <= end) {// 边界有效
-				int mid = (begin + end) / 2;// 中间位置，当前比较元素位置
-				System.out.println(value[mid] + "? ");
-				if (value[mid].compareTo(key) == 0)// 对象比较大小
-					return mid;// 查找成功
-				if (value[mid].compareTo(key) > 0)// 给定对象小
-					end = mid - 1;// 查找范围缩小到前半段
-				else
-					begin = mid + 1;// 查找范围缩小到后半段
-			}
-		return -1;// 查找不成功
-	}
-````
+* **SeqQueue** 使用数组实现一种队列结构，时间复杂度如下:
+ * enqueue: `O(1)`
+ * dequeue: `O(1)`
+* **LinkedQueue**  使用链表实现的一种队列结构
+
+![Alt text](/res/stack_queue.png?raw=true "stackqueue")
+
+* **PriorityQueue** 优先级队列，优先级高的元素最先出队
+* **SeqStack** 使用数组实现的一种栈结构
+ * push: `O(1)`
+ * pop: `O(1)`
+* **LinkedStack** 使用链表实现的一种栈结构
+
+### 串
+
+串（string）是由零个或多个宇符组成的有限序列，又名叫字符串。
+
+* **MyString** 模拟字符串结构
+* **MyStringBuffer** 模拟可变字符串结构
+
+### 数组和广义表
+
+数组是一个由一组类型相同、下标不同的变量构成的数据结构，广义表元素的值非原子类型，可以再分解，表中元素也可是一个线性表，所有数据元素仍然属于同一数据类型。
+
+* **GenList** 双链结构的广义表
+* **DownTriangleMatrix** 线性压缩存储的下三角矩阵
+* **CrossLinkedSparseMatrix** 十字链表存储的系数矩阵
+* **LinkedSparseMatrix** 三元组行的单链表存储的系数矩阵
+* **Matrix** 用数组进行的存储的一种矩阵结构
+* **SeqSparseMatrix** 稀疏矩阵三元组顺序表存储的一种矩阵结构
+
+### 树
+
+树状图是一种数据结构，它是由n（n>=1）个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的
+
+* **Tree** 树形结构，每个节点包含孩子结点和兄弟结点
+* **BinaryTree** 二叉树，每个节点包含左孩子结点和右孩子及结点
+
+     ![Alt text](/res/binarytree.jpg?raw=true "Hashing")
+
+* **CompleteBinaryTree** 完全二叉树，除最后一层外，每一层上的结点数均达到最大值；在最后一层上只缺少右边的若干结点。
+
+> 满二叉树:除最后一层无任何子节点外，每一层上的所有结点都有两个子结点的二叉树。
+
+![Alt text](/res/complete.jpg?raw=true "Hashing")
+
+
+* **ThreadBinaryTree** 中序线索二叉树，按照中序遍历，每个节点的左孩子为空，则指向它的前驱结点，右孩子为空，则指向它的后继结点
+
+### 图
+图是一种数据元素间为多对多关系的数据结构
+* 无向图（Undirected Graph）: 无向图具有对称的邻接矩阵，因此如果存在某条从节点 u 到节点 v 的边，反之从 v 到 u 的边也存在。
+* 有向图（Directed Graph）: 有向图的邻接矩阵是非对称的，即如果存在从 u 到 v 的边并不意味着一定存在从 v 到 u 的边。
+
+![Alt text](/res/graph.png?raw=true "Hashing")
+
+* **AdjMatrixGraph** 邻接矩阵表示的带权图数据机构
+* **AdjListGraph** 邻接表表示的带权图数据结构
+
+![Alt text](/res/MatrixListGraph.jpg?raw=true "Hashing")
+
+
+### 排序
+#### **插入排序**
+ * 直接插入排序(稳定)
+ 
+![Alt text](/res/insertsort1.jpg?raw=true "Hashing")
+ * 希尔排序(不稳定)
+ 
+ ![Alt text](/res/insertsort2.jpg?raw=true "Hashing")
+
+ 
+#### **交换排序**
+
+ * 冒泡排序(稳定)
+ 
+  ![Alt text](/res/bubblesort.jpg?raw=true "Hashing")
+  
+ * 快速排序(不稳定)  时间复杂度如下:
+   * 最优时间: O(nlog(n))
+   * 最坏时间: O(n^2)
+   * 平均时间: O(nlog(n))
+   
+     ![Alt text](/res/quicksort.jpg?raw=true "Hashing")
+
+####  **选择排序**
+ * 直接选择排序(不稳定)
+ 
+      ![Alt text](/res/selectsort.jpg?raw=true "Hashing")
+      
+ * 堆排序(不稳定) 利用堆积树（堆）这种数据结构所设计的一种排序算法，它是选择排序的一种。可以利用数组的特点快速定位指定索引的元素。堆分为大根堆和小根堆，是完全二叉树。大根堆的要求是每个节点的值都不大于其父节点的值，即A[PARENT[i]] >= A[i]。在数组的非降序排序中，需要使用的就是大根堆，因为根据大根堆的要求可知，最大的值一定在堆顶。 时间复杂度如下：
+  * 最优时间: O(nlog(n))
+  * 最坏时间: O(nlog(n))
+  * 平均时间: O(nlog(n))
+  
+       ![Alt text](/res/heapsort.jpg?raw=true "Hashing")
+
+  
+* 归并排序(稳定) 归并排序是利用一种分治的思想，它不断地将某个数组分为两个部分，分别对左子数组与右子数组进行排序，然后将两个数组合并为新的有序数组。时间复杂度如下:
+  * 最优时间: O(nlog(n))
+  * 最坏时间: O(nlog(n))
+  * 平均时间: O(nlog(n))
+  
+     ![Alt text](/res/mergesort.png?raw=true "Hashing")
+
+
+### 查找
+
+* **BinarySortTree** 二叉排序树，一种特殊的二叉树，对于每一个结点，它的左孩子下所有的结点数值一定比它的右孩子下所有结点的数值小，构造过程如下:
+
+   ![Alt text](/res/binarysort.jpg?raw=true "Hashing")     
+      
+* **HashSet** 采用链地址法的散列表数据结构，内部使用了SinglyLinkedList数组存储元素
+
+   ![Alt text](/res/hash.jpg?raw=true "Hashing")
+
+
+> 关于哈希: 一般的线性表，树中，记录在结构中的相对位置是随机的，因此，在结构中查找记录时需进行一系列和关键字的比较。 理想的情况是能直接找到需要的记录，因此必须在记录的存储位置和它的关键字之间建立一个确定的对应关系f，使每个关键字和结构中一个唯一的存储位置相对应。
+
+> 解决冲突：
+> * 链接法(拉链法)。将具有同一散列地址的记录存储在一条线性链表中。例，除留余数法中，设关键字为 (18,14,01,68,27,55,79)，除数为13。散列地址为 (5,1,1,3,1,3,1)，
+> * 开地址法 在开地址法中，当插入新值时，会判断该值对应的哈希桶是否存在，如果存在则根据某种算法依次选择下一个可能的位置，直到找到一个尚未被占用的地址。所谓开地址法也是指某个元素的位置并不永远由其哈希值决定。
 
 ## 联系我
 
 * 邮箱：doubleview@163.com
-* 微信：hcc883721

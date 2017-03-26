@@ -33,7 +33,7 @@ public class q006_ZigZagConversion {
 
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      * @param s
      * @param numRows
      * @return
@@ -62,7 +62,13 @@ public class q006_ZigZagConversion {
         return  sb.toString();
     }
 
-
+    /**
+     * 解法2
+     *
+     * @param s
+     * @param nRows
+     * @return
+     */
     public static String convert2(String s, int nRows) {
         char[] c = s.toCharArray();
         int len = c.length;

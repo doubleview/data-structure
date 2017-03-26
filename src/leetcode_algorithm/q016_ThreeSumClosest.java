@@ -18,6 +18,13 @@ public class q016_ThreeSumClosest {
         System.out.println(threeSumClosest(new int[]{1 , 2 , -1 , -4} , 2) );
     }
 
+    /**
+     * ½â·¨1
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int threeSumClosest(int[] nums, int target) {
         int result = nums[0] + nums[1] + nums[nums.length - 1];
         Arrays.sort(nums);

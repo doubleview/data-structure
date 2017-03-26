@@ -27,7 +27,13 @@ public class q002_AddTwoNumbers {
         System.out.println(solution(a1 , a2));
     }
 
-
+    /**
+     * ½â·¨1
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
     public static  ListNode solution(ListNode l1 , ListNode l2){
         ListNode dummyHead = new ListNode(0);
         ListNode p = l1 , q = l2 , curr = dummyHead;

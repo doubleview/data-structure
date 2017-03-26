@@ -25,7 +25,7 @@ public class q008_StringToInteger {
     }
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      * @param str
      * @return
      */
@@ -51,6 +51,12 @@ public class q008_StringToInteger {
         return  (int) result*flag;
     }
 
+    /**
+     * 解法2
+     *
+     * @param str
+     * @return
+     */
     public static int myAtoi2(String str) {
         if (str == null || str.length() == 0)
             return 0;//

@@ -24,6 +24,13 @@ public class q001_TwoSum {
     }
 
 
+    /**
+     * 解法1(个人解法)
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int[] solution1(int[] nums , int target){
         for(int i = 0;i<nums.length;i++){
             for(int j=  i+1;j<nums.length;j++){
@@ -35,6 +42,12 @@ public class q001_TwoSum {
         throw new IllegalArgumentException("No two sum solution");
     }
 
+    /**
+     * 解法2
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int[] solution2(int[] nums , int target){
         Map<Integer , Integer> map = new HashMap<>();
         for(int i = 0;i< nums.length;i++){
@@ -49,6 +62,12 @@ public class q001_TwoSum {
         throw new IllegalArgumentException("No two sum solution");
     }
 
+    /**
+     * 解法3
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int[] solution3(int[] nums , int target){
         Map<Integer , Integer> map = new HashMap<>();
         for(int i = 0;i<nums.length;i++){

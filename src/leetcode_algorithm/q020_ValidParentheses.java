@@ -22,7 +22,8 @@ public class q020_ValidParentheses {
     }
 
     /**
-     * 个人解法
+     * 解法1 (个人解法)
+     * 利用栈
      * @param s
      * @return
      */

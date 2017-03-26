@@ -15,7 +15,12 @@ public class q013_RomanToInteger {
         System.out.println(romanToInt("CCXXXIV"));
     }
 
-
+    /**
+     * ½â·¨1
+     *
+     * @param s
+     * @return
+     */
     public static int romanToInt(String s) {
         int nums[]=new int[s.length()];
         for(int i=0;i<s.length();i++){

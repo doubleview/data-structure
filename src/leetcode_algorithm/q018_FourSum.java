@@ -21,7 +21,7 @@ public class q018_FourSum {
     }
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      * @param nums
      * @param target
      * @return

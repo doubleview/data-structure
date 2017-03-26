@@ -32,6 +32,14 @@ public class q010_RegularExpressionMatching {
         System.out.println(isMathc("aab" , "aab*"));
     }
 
+
+    /**
+     * ½â·¨1
+     *
+     * @param s
+     * @param p
+     * @return
+     */
     public static boolean isMathc(String s, String p) {
 
         if (s == null || p == null) {

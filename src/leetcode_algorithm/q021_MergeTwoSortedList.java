@@ -26,7 +26,7 @@ public class q021_MergeTwoSortedList {
     }
 
     /**
-     * 个人解法
+     * 解法1 (个人解法)
      * @param l1
      * @param l2
      * @return
@@ -62,7 +62,7 @@ public class q021_MergeTwoSortedList {
 
 
     /**
-     * 推荐解法
+     * 解法2 (推荐解法)
      * @param l1
      * @param l2
      * @return

@@ -14,10 +14,18 @@ public class IntRandom {
 		return table;
 	}
 
+    public static void print(int[] table) {
+        System.out.print(table[0]);
+        for (int i = 1; i < table.length; i++) {
+            System.out.print(" , " + table[i]);
+        }
+        System.out.println();
+    }
+
 	public static void main(String[] args) {
 		int[] table = random(6);
 		System.out.print("¹Ø¼ü×ÖÐòÁÐ£º");
-		Array.print(table);
-		Array.insertSort(table);
-	}
+        print(table);
+        ArraySort.insertSort(table);
+    }
 }

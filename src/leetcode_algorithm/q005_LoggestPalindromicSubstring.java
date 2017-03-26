@@ -28,9 +28,8 @@ public class q005_LoggestPalindromicSubstring {
         System.out.println(longestPalindrome("abcda"));
     }
 
-
     /**
-     * 个人解法
+     * 解法1
      * @param s
      * @return
      */
@@ -55,9 +54,12 @@ public class q005_LoggestPalindromicSubstring {
     }
 
 
-
-    private int lo, maxLen;
-
+    /**
+     * 解法2
+     *
+     * @param s
+     * @return
+     */
     public String longestPalindrome2(String s) {
         int len = s.length();
         if (len < 2)
@@ -70,6 +72,7 @@ public class q005_LoggestPalindromicSubstring {
         return s.substring(lo, lo + maxLen);
     }
 
+    private int lo, maxLen;
     private void extendPalindrome(String s, int j, int k) {
         while (j >= 0 && k < s.length() && s.charAt(j) == s.charAt(k)) {
             j--;

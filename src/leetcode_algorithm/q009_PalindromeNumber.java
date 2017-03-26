@@ -13,7 +13,7 @@ public class q009_PalindromeNumber {
     }
 
     /**
-     * 个人解法
+     * 解法1
      * @param x
      * @return
      */

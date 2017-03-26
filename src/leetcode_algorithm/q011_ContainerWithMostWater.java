@@ -17,6 +17,12 @@ public class q011_ContainerWithMostWater {
         System.out.println(maxArea(new int[]{0  ,2}));
     }
 
+    /**
+     * ½â·¨1
+     *
+     * @param height
+     * @return
+     */
     public static int maxArea(int[] height) {
         int left = 0 , right = height.length - 1;
         int maxArea = 0;

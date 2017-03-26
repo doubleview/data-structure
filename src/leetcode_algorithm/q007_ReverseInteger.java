@@ -15,29 +15,13 @@ public class q007_ReverseInteger {
         System.out.println(reverse(1000000003));
     }
 
+
     /**
-     * 个人解法
+     * 解法1
      * @param x
      * @return
      */
     public static int reverse(int x) {
-        String s  = String.valueOf(Math.abs(x));
-        StringBuilder sb = new StringBuilder(s);
-        sb.reverse();
-
-        if(x < 0){
-            sb.insert(0 , "-");
-        }
-        try {
-            Integer i = Integer.parseInt(sb.toString());
-            return i;
-        }catch (NumberFormatException e){
-            return 0;
-        }
-    }
-
-
-    public static int reverse2(int x) {
         int result = 0;
         while (x != 0) {
             int tail = x % 10;

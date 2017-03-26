@@ -36,7 +36,7 @@ public class q025_ReverseNodesInKGroup {
     }
 
     /**
-     * 个人解法
+     * 解法1 (个人解法)
      * @param head
      * @param k
      * @return
@@ -66,7 +66,7 @@ public class q025_ReverseNodesInKGroup {
     }
 
     /**
-     * 推荐解法
+     * 解法2 (推荐解法)
      * @param head
      * @param k
      * @return

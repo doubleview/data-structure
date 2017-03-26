@@ -37,7 +37,7 @@ public class q019_RemoveNthNodeFromEndOfList {
 
 
     /**
-     * 个人解法
+     * 解法1 (个人解法)
      * @param head
      * @param n
      * @return
@@ -61,7 +61,7 @@ public class q019_RemoveNthNodeFromEndOfList {
 
 
     /**
-     * 推荐解法
+     * 解法2 (推荐解法)
      * @param head
      * @param n
      * @return

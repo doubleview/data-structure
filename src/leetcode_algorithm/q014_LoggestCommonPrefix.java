@@ -14,7 +14,7 @@ public class q014_LoggestCommonPrefix {
     }
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      * @param strs
      * @return
      */
@@ -35,7 +35,12 @@ public class q014_LoggestCommonPrefix {
         return sb.toString();
     }
 
-
+    /**
+     * 解法2
+     *
+     * @param strs
+     * @return
+     */
     public static String longestCommonPrefix2(String[] strs) {
         if(strs == null || strs.length == 0)    return "";
         String pre = strs[0];

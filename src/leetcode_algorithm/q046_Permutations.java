@@ -34,7 +34,7 @@ public class q046_Permutations {
      */
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
-        // Arrays.sort(nums); // not necessary
+        // ArraySort.sort(nums); // not necessary
         backtrack(list, new ArrayList<>(), nums);
         return list;
     }

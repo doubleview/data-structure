@@ -1,7 +1,7 @@
 package leetcode_algorithm;
 
 /**
- * Follow up for "Search in Rotated Sorted Array":
+ * Follow up for "Search in Rotated Sorted ArraySort":
  * What if duplicates are allowed?
  * <p>
  * Would this affect the run-time complexity? How and why?

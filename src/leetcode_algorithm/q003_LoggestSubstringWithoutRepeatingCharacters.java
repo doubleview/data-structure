@@ -31,7 +31,7 @@ public class q003_LoggestSubstringWithoutRepeatingCharacters {
     }
 
     /**
-     * 个人解法
+     * 解法1
      * @param s
      * @return
      */
@@ -61,6 +61,12 @@ public class q003_LoggestSubstringWithoutRepeatingCharacters {
     }
 
 
+    /**
+     * 解法2
+     *
+     * @param s
+     * @return
+     */
     public static int solution2(String s){
         int n = s.length();
         int ans = 0;
