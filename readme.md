@@ -30,19 +30,19 @@
 
 ![Alt text](/res/list.png?raw=true "list")
 * **SeqList** 用数组实现的一种单链表,时间复杂度如下:
- * 索引: `O(1)`
- * 搜索: `O(n)`
- * 插入: `O(n)`
- * 移除: `O(n)`
+  * 索引: `O(1)`
+  * 搜索: `O(n)`
+  * 插入: `O(n)`
+  * 移除: `O(n)`
  
  ![Alt text](/res/arraylist.jpg?raw=true "SeqList")
 
 
 * **SinglyLinkedList**  带头结点的单链表，它是由节点（Node）组成的线性集合，每个节点可以利用指针指向其他节点。时间复杂度如下:
- * 索引: `O(n)`
- * 搜索: `O(n)`
- * 插入: `O(1)`
- * 移除: `O(1)`
+  * 索引: `O(n)`
+  * 搜索: `O(n)`
+  * 插入: `O(1)`
+  * 移除: `O(1)`
  
   ![Alt text](/res/linkedlist.jpg?raw=true "SinglyLinkedList")
 
@@ -57,16 +57,16 @@
 ![Alt text](/res/stackqueue.png?raw=true "stackqueue")
 
 * **SeqQueue** 使用数组实现一种队列结构，时间复杂度如下:
- * enqueue: `O(1)`
- * dequeue: `O(1)`
+  * enqueue: `O(1)`
+  * dequeue: `O(1)`
 * **LinkedQueue**  使用链表实现的一种队列结构
 
 ![Alt text](/res/stack_queue.png?raw=true "stackqueue")
 
 * **PriorityQueue** 优先级队列，优先级高的元素最先出队
 * **SeqStack** 使用数组实现的一种栈结构
- * push: `O(1)`
- * pop: `O(1)`
+  * push: `O(1)`
+  * pop: `O(1)`
 * **LinkedStack** 使用链表实现的一种栈结构
 
 ### 串
@@ -147,9 +147,9 @@
       ![Alt text](/res/selectsort.jpg?raw=true "Hashing")
       
  * 堆排序(不稳定) 利用堆积树（堆）这种数据结构所设计的一种排序算法，它是选择排序的一种。可以利用数组的特点快速定位指定索引的元素。堆分为大根堆和小根堆，是完全二叉树。大根堆的要求是每个节点的值都不大于其父节点的值，即A[PARENT[i]] >= A[i]。在数组的非降序排序中，需要使用的就是大根堆，因为根据大根堆的要求可知，最大的值一定在堆顶。 时间复杂度如下：
-  * 最优时间: O(nlog(n))
-  * 最坏时间: O(nlog(n))
-  * 平均时间: O(nlog(n))
+   * 最优时间: O(nlog(n))
+   * 最坏时间: O(nlog(n))
+   * 平均时间: O(nlog(n))
   
        ![Alt text](/res/heapsort.jpg?raw=true "Hashing")
 
