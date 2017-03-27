@@ -18,7 +18,7 @@ public class q022_GenerateParentheses {
     }
 
     /**
-     * 个人解法
+     * 解法1 (个人解法)
      * @param n
      * @return
      */
@@ -45,7 +45,7 @@ public class q022_GenerateParentheses {
     }
 
     /**
-     * 推荐解法
+     * 解法2 (推荐解法)
      * @param n
      * @return
      */

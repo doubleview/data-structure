@@ -15,7 +15,7 @@ public class q028_ImplementStrStr {
     }
 
     /**
-     * 个人解法
+     * 解法1 个人解法
      * @param haystack
      * @param needle
      * @return
@@ -26,7 +26,7 @@ public class q028_ImplementStrStr {
 
 
     /**
-     * 推荐解法
+     * 解法2 推荐解法
      * @param haystack
      * @param needle
      * @return

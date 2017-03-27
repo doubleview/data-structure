@@ -24,7 +24,7 @@ public class q032_LoggestValidParentheses {
 
 
     /**
-     * 推荐解法
+     * 解法1 推荐解法
      * @param s
      * @return
      */
@@ -48,6 +48,9 @@ public class q032_LoggestValidParentheses {
 
 
     /**
+     *
+     * 解法2
+     *
          * And the DP idea is :
 
          If s[i] is '(', set longest[i] to 0,because any string end with '(' cannot be a valid one.

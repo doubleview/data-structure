@@ -42,7 +42,7 @@ public class q023_MergeKSortedLists {
     }
 
     /**
-     * 个人解法
+     * 解法1 (个人解法)
      * @param lists
      * @return
      */
@@ -85,7 +85,7 @@ public class q023_MergeKSortedLists {
 
 
     /**
-     * 推荐，采用优先级队列算法
+     * 解法2 推荐，采用优先级队列算法
      * @param lists
      * @return
      */

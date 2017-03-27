@@ -21,7 +21,7 @@ public class q026_RemoveDuplicatesFromSortedArray {
     }
 
     /**
-     * 推荐解法
+     * 解法1 推荐解法
      * @param nums
      * @return
      */

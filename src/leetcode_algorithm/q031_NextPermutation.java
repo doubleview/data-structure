@@ -26,6 +26,10 @@ public class q031_NextPermutation {
         System.out.println(Arrays.toString(nums));
     }
 
+    /**
+     * ½â·¨1
+     * @param nums
+     */
     public void nextPermutation(int[] nums) {
         if(nums == null || nums.length<=1) return;
         int i = nums.length - 2;

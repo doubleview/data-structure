@@ -23,6 +23,13 @@ public class q033_SearchInRotatedSortedArray {
         System.out.println(new q033_SearchInRotatedSortedArray().search(nums, 5));
     }
 
+
+    /**
+     * ½â·¨1
+     * @param nums
+     * @param target
+     * @return
+     */
     public int search(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;

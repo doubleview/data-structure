@@ -16,7 +16,7 @@ public class q029_DivideTwoInteger {
     }
 
     /**
-     * 推荐解法
+     * 解法1 推荐解法
      * @param dividend
      * @param divisor
      * @return
