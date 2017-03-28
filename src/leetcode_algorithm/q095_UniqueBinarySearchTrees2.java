@@ -25,6 +25,7 @@ public class q095_UniqueBinarySearchTrees2 {
     public static void main(String[] args) {
         q095_UniqueBinarySearchTrees2 solution = new q095_UniqueBinarySearchTrees2();
         System.out.println(solution.generateTrees(3));
+        System.out.println(solution.generateTrees(19));
     }
 
 
