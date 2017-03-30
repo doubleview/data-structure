@@ -68,7 +68,7 @@ public class PhoneBookJFrame extends JFrame implements ListSelectionListener,
         this.book = new PhoneBookTreeSet(filename);
         this.listModel = new DefaultListModel<String>();// 默认列表框模型
         this.listModel.addElement("全部");
-        this.list = new JList<String>(listModel);// 创建列表框
+        this.list = new JList<>(listModel);// 创建列表框
         this.list.setFont(f);
         this.list.setBackground(new Color(205, 250, 215));
 		this.list.setSelectionBackground(Color.GREEN);
