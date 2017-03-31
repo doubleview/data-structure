@@ -1,7 +1,9 @@
-package search;
+package search.test;
+
+import search.BinarySortTree;
 
 /**
- * 
+ *
  * 二叉排序树的插入和查找操作
  */
 public class BinarySortTree_ex {
