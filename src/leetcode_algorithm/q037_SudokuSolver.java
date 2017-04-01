@@ -35,7 +35,7 @@ public class q037_SudokuSolver {
 
 
     /**
-     *
+     *½â·¨1
      * @param board
      */
     public void solveSudoku(char[][] board) {

@@ -13,7 +13,7 @@ public class q050_PowXN {
     }
 
     /**
-     * 推荐解法
+     * 解法1(推荐解法)
      * @param x
      * @param n
      * @return

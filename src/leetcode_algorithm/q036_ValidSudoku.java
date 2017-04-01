@@ -29,7 +29,12 @@ public class q036_ValidSudoku {
         System.out.println(new q036_ValidSudoku().isValidSudoku(tmp));
     }
 
-
+    /**
+     * ½â·¨1
+     *
+     * @param board
+     * @return
+     */
     public boolean isValidSudoku(char[][] board) {
         for(int i = 0; i<9; i++){
             HashSet<Character> rows = new HashSet<>();

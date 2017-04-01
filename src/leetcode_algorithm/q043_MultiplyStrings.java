@@ -13,7 +13,7 @@ public class q043_MultiplyStrings {
     }
 
     /**
-     * 推荐解法 图解法
+     * 解法1 (推荐解法 图解法)
      *
      * @param num1
      * @param num2

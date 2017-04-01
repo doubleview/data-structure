@@ -21,7 +21,7 @@ public class q052_NQueens2 {
     }
 
     /**
-     *
+     * 解法1
      * @param n
      * @return
      */
@@ -51,8 +51,9 @@ public class q052_NQueens2 {
         }
     }
 
+
     /**
-     *
+     *解法2
      * @param n
      * @return
      */

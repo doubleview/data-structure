@@ -16,7 +16,7 @@ public class q070_ClimbingStairs {
     }
 
     /**
-     * 个人解法
+     *  解法1(个人解法)
      *
      * @param n
      * @return

@@ -40,6 +40,13 @@ public class q068_TextJustification {
 
     }
 
+    /**
+     * 解法1(个人解法)
+     *
+     * @param words
+     * @param maxWidth
+     * @return
+     */
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> lines = new ArrayList<>();
         int index = 0;

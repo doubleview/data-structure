@@ -23,7 +23,7 @@ public class q059_SpiralMatrix2 {
     }
 
     /**
-     * 个人解法
+     *  解法1(个人解法)
      *
      * @param n
      * @return

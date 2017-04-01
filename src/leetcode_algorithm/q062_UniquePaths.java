@@ -20,7 +20,7 @@ public class q062_UniquePaths {
     }
 
     /**
-     * 个人解法
+     *  解法1(个人解法)
      * @param m
      * @param n
      * @return

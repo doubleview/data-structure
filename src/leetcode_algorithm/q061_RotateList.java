@@ -27,7 +27,7 @@ public class q061_RotateList {
 
 
     /**
-     * 个人解法
+     *  解法1(个人解法)
      *
      * @param head
      * @param k

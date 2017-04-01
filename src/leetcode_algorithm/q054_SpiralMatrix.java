@@ -31,28 +31,23 @@ public class q054_SpiralMatrix {
 
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      *
      * @param matrix
      * @return
      */
     public List<Integer> spiralOrder(int[][] matrix) {
-        if (matrix.length == 0) {
-            return new ArrayList<>();
-        }
+        if (matrix.length == 0) return new ArrayList<>();
         return getSpiralOrder(new ArrayList<>(), matrix, matrix.length, matrix[0].length, 0, 0);
     }
 
     private List<Integer> getSpiralOrder(List<Integer> list, int[][] matrix, int row, int col, int r, int c) {
-        if (row <= 0 || col <= 0) {
-            return list;
-        }
-        for (int i = c; i < c + col; i++) {
-            list.add(matrix[r][i]);
-        }
-        for (int i = r + 1; i < r + row - 1; i++) {
-            list.add(matrix[i][c + col - 1]);
-        }
+        if (row <= 0 || col <= 0) return list;
+
+        for (int i = c; i < c + col; i++) list.add(matrix[r][i]);
+
+        for (int i = r + 1; i < r + row - 1; i++) list.add(matrix[i][c + col - 1]);
+
         if (row != 1) {
             List<Integer> columns = new ArrayList<>();
             for (int i = c + col - 1; i >= r; i--) {
@@ -60,6 +55,7 @@ public class q054_SpiralMatrix {
             }
             list.addAll(columns);
         }
+
         if (col != 1) {
             List<Integer> rows = new ArrayList<>();
             for (int i = r + row - 2; i >= r + 1; i--) {
@@ -67,12 +63,13 @@ public class q054_SpiralMatrix {
             }
             list.addAll(rows);
         }
+
         return getSpiralOrder(list, matrix, row - 2, col - 2, r + 1, c + 1);
     }
 
 
     /**
-     * 推荐解法
+     * 解法2(推荐解法)
      *
      * @param matrix
      * @return

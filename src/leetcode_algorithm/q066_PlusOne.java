@@ -23,6 +23,12 @@ public class q066_PlusOne {
         System.out.println(Arrays.toString(new q066_PlusOne().plusOne(new int[]{9, 9, 9, 9})));
     }
 
+    /**
+     * 解法1(个人解法)
+     *
+     * @param digits
+     * @return
+     */
     public int[] plusOne(int[] digits) {
         int n = digits.length;
         for (int i = n - 1; i >= 0; i--) {

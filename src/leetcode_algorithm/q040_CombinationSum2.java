@@ -31,7 +31,7 @@ public class q040_CombinationSum2 {
     }
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      * @param candidates
      * @param target
      * @return

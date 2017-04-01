@@ -25,7 +25,7 @@ public class q056_MergeIntevals {
     }
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      *
      * @param intervals
      * @return

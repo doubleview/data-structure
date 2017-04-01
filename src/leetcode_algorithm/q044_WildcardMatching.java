@@ -35,6 +35,13 @@ public class q044_WildcardMatching {
         System.out.println(new q044_WildcardMatching().isMatch("aab", "c*a*b"));
     }
 
+    /**
+     * ½â·¨1
+     *
+     * @param s
+     * @param p
+     * @return
+     */
     public boolean isMatch(String s, String p) {
         boolean[][] match = new boolean[s.length() + 1][p.length() + 1];
         match[s.length()][p.length()] = true;

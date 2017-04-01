@@ -20,6 +20,11 @@ public class q075_SortColors {
     }
 
 
+    /**
+     * ½â·¨1
+     *
+     * @param nums
+     */
     public void sortColors(int[] nums) {
         int p1 = 0, p2 = nums.length - 1, index = 0;
         while (index <= p2) {

@@ -23,7 +23,7 @@ public class q065_ValidNumber {
     }
 
     /**
-     * 推荐解法
+     * 解法1(推荐解法)
      *
      * @param s
      * @return

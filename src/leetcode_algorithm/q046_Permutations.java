@@ -28,7 +28,7 @@ public class q046_Permutations {
     }
 
     /**
-     * 推荐解法
+     * 解法1(推荐解法)
      * @param nums
      * @return
      */

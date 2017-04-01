@@ -26,7 +26,7 @@ public class q047_Permutation2 {
     }
 
     /**
-     * 推荐解法
+     * 解法1(推荐解法)
      * @param nums
      * @return
      */

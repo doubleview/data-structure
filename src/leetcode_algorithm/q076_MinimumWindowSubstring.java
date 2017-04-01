@@ -25,8 +25,7 @@ public class q076_MinimumWindowSubstring {
 
 
     /**
-     * 推荐解法
-     *
+     * 解法1(推荐解法)
      * @param s
      * @param t
      * @return

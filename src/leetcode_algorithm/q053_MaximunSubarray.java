@@ -18,6 +18,12 @@ public class q053_MaximunSubarray {
         System.out.println(new q053_MaximunSubarray().maxSubArray(new int[]{-3, 1, -2}));
     }
 
+    /**
+     * 解法1(推荐解法)
+     *
+     * @param nums
+     * @return
+     */
     public int maxSubArray(int[] nums) {
         int sum = 0;
         int smax = Integer.MIN_VALUE;

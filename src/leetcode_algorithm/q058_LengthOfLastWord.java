@@ -20,7 +20,7 @@ public class q058_LengthOfLastWord {
     }
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      *
      * @param s
      * @return
@@ -32,7 +32,7 @@ public class q058_LengthOfLastWord {
 
 
     /**
-     * 推荐解法
+     * 解法2(推荐解法)
      *
      * @param s
      * @return

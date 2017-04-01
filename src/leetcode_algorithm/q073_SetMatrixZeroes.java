@@ -28,6 +28,11 @@ public class q073_SetMatrixZeroes {
         System.out.println(Arrays.deepToString(nums));
     }
 
+    /**
+     * ½â·¨1
+     *
+     * @param matrix
+     */
     public void setZeroes(int[][] matrix) {
         boolean fr = false, fc = false;
         for (int i = 0; i < matrix.length; i++) {

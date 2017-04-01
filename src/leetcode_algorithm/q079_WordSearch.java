@@ -34,6 +34,13 @@ public class q079_WordSearch {
         System.out.println(solution.exist(board, "ABCD"));
     }
 
+    /**
+     * ½â·¨1
+     *
+     * @param board
+     * @param word
+     * @return
+     */
     public boolean exist(char[][] board, String word) {
         char[] w = word.toCharArray();
         for (int y = 0; y < board.length; y++) {

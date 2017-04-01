@@ -21,6 +21,12 @@ public class q041_FirstMissingPositive {
         System.out.println(new q041_FirstMissingPositive().firstMissingPositive(new int[]{7, 8, 1, 2}));
     }
 
+    /**
+     * ½â·¨1
+     *
+     * @param nums
+     * @return
+     */
     public int firstMissingPositive(int[] nums) {
         int i = 0;
         while (i < nums.length) {

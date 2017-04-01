@@ -45,7 +45,7 @@ public class q072_EditDistance {
     */
 
     /**
-     * 推荐解法
+     * 解法1(推荐解法)
      *
      * @param word1
      * @param word2

@@ -29,7 +29,7 @@ public class q049_GroupAnagrams {
 
 
     /**
-     * 推荐解法
+     * 解法1(推荐解法)
      * @param strs
      * @return
      */

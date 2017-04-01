@@ -10,7 +10,7 @@ public class q045_JumpGame2 {
 
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      * @param nums
      * @return
      */
@@ -32,7 +32,7 @@ public class q045_JumpGame2 {
 
 
     /**
-     *其他解法
+     *解法2
      * @param nums
      * @return
      */

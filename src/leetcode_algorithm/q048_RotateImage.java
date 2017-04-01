@@ -26,7 +26,7 @@ public class q048_RotateImage {
     }
 
     /**
-     * 推荐解法
+     * 解法1 (推荐解法)
      * @param matrix
      */
     public void rotate(int[][] matrix) {

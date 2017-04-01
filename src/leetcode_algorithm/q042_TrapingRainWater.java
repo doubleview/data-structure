@@ -20,7 +20,7 @@ public class q042_TrapingRainWater {
 
 
     /**
-     * 推荐解法
+     * 解法1 (推荐解法)
      * @param height
      * @return
      */

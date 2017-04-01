@@ -26,7 +26,7 @@ public class q077_Combinations {
     }
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      *
      * @param n
      * @param k

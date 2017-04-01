@@ -25,7 +25,7 @@ public class q064_MinmunPathSum {
     }
 
     /**
-     * 个人解法
+     *  解法1(个人解法)
      * @param grid
      * @return
      */

@@ -32,7 +32,7 @@ public class q057_InsertInteval {
     }
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      *
      * @param intervals
      * @param interval
@@ -67,7 +67,7 @@ public class q057_InsertInteval {
 
 
     /**
-     * 推荐解法
+     * 解法2(推荐解法)
      *
      * @param intervals
      * @param newINterval

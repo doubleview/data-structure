@@ -29,6 +29,7 @@ public class q060_PermutationSequence {
     }
 
     /**
+     *  解法1(个人解法)
      * @param n
      * @param k
      * @return

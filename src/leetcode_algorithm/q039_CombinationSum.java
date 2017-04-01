@@ -37,7 +37,7 @@ public class q039_CombinationSum {
     int index = 0;
 
     /**
-     * 个人解法
+     * 解法1 (个人解法)
      * @param candidates
      * @param target
      * @return
@@ -67,7 +67,7 @@ public class q039_CombinationSum {
 
 
     /**
-     * 推荐 ， 回溯法
+     * 解法2 (推荐 ， 回溯法)
      * @param nums
      * @param target
      * @return

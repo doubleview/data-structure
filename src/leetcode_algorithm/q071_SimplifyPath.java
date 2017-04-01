@@ -19,7 +19,7 @@ public class q071_SimplifyPath {
     }
 
     /**
-     * 推荐解法
+     * 解法1(推荐解法)
      *
      * @param path
      * @return

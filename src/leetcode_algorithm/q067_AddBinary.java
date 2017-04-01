@@ -16,6 +16,8 @@ public class q067_AddBinary {
     }
 
     /**
+     *
+     *  ½â·¨1
      * @param a
      * @param b
      * @return

@@ -41,7 +41,7 @@ public class q051_NQueens {
     }
 
     /**
-     *
+     *解法1(推荐解法)
      * @param n
      * @return
      */

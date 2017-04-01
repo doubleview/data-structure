@@ -22,7 +22,7 @@ public class q055_JumpGame {
 
 
     /**
-     * 个人解法
+     * 解法1(个人解法)
      *
      * @param nums
      * @return
