@@ -30,7 +30,7 @@ public class q100_SameTree {
 
 
     /**
-     * 解法
+     * 解法1
      * @param p
      * @param q
      * @return

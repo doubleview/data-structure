@@ -15,8 +15,8 @@ public class PrimeRing {
 	public PrimeRing(int n) {
         SeqList<Integer> ring = new SeqList<Integer>(n);// 创建一个顺序表存储素数环
         ring.append(new Integer(1));// 1添加到素数环中
-        SeqQueue<Integer> que = new SeqQueue<Integer>(n);// 创建一个队列
-        for (int i = 2; i <= n; i++)
+		SeqQueue<Integer> que = new SeqQueue<>(n);// 创建一个队列
+		for (int i = 2; i <= n; i++)
             // 2-n全部入队
             que.enquenu(new Integer(i));
 		int i = 0;
