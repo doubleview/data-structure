@@ -16,7 +16,7 @@ import java.util.Queue;
  * But the following [1,2,2,null,3,null,3] is not:
  * 1
  * / \
- * 2   2
+ * 2   2git
  * \   \
  * 3    3
  */
