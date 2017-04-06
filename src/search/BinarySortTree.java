@@ -4,8 +4,7 @@ import tree.BinaryNode;
 import tree.BinaryTree;
 
 /**
- * 二叉排序树
- */
+ * 二叉排序树 */
 public class BinarySortTree<T extends Comparable<T>> extends BinaryTree<T> {
 
 	// 构造空二叉排序树
