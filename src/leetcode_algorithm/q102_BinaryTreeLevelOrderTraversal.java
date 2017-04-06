@@ -22,40 +22,30 @@ import java.util.Queue;
  * [15,7]
  * ]
  */
+
 public class q102_BinaryTreeLevelOrderTraversal {
 
+    public static void main(String[] args) {
+        q102_BinaryTreeLevelOrderTraversal solution = new q102_BinaryTreeLevelOrderTraversal();
+        TreeNode t1 = new TreeNode(3);
+        TreeNode t2 = new TreeNode(9);
+        TreeNode t3 = new TreeNode(20);
+        TreeNode t4 = new TreeNode(15);
+        TreeNode t5 = new TreeNode(7);
+        t1.left = t2;
+        t1.right = t3;
+        t3.left = t4;
+        t3.right = t5;
+        System.out.println(solution.levelOrder(t1));
+    }
 
     /**
-     * 解法1 利用队列
+     * 解法1 DFS
      *
      * @param root
      * @return
      */
     public List<List<Integer>> levelOrder(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
-        List<List<Integer>> wrapList = new LinkedList<>();
-        if (root == null) return wrapList;
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            int levelNum = queue.size();
-            List<Integer> subList = new LinkedList<>();
-            for (int i = 0; i < levelNum; i++) {
-                if (queue.peek().left != null) queue.offer(queue.peek());
-                if (queue.peek().right != null) queue.offer(queue.peek());
-                subList.add(queue.poll().val);
-            }
-            wrapList.add(subList);
-        }
-        return wrapList;
-    }
-
-    /**
-     * 解法2 DFS
-     *
-     * @param root
-     * @return
-     */
-    public List<List<Integer>> levelOrder2(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         levelHelper(res, root, 0);
         return res;
@@ -67,6 +57,31 @@ public class q102_BinaryTreeLevelOrderTraversal {
         res.get(height).add(root.val);
         levelHelper(res, root.left, height + 1);
         levelHelper(res, root.right, height + 1);
+    }
+
+
+    /**
+     * 解法2 利用队列
+     *
+     * @param root
+     * @return
+     */
+    public List<List<Integer>> levelOrder2(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> wrapList = new LinkedList<>();
+        if (root == null) return wrapList;
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int levelNum = queue.size();
+            List<Integer> subList = new LinkedList<>();
+            for (int i = 0; i < levelNum; i++) {
+                if (queue.peek().left != null) queue.offer(queue.peek().left);
+                if (queue.peek().right != null) queue.offer(queue.peek().right);
+                subList.add(queue.poll().val);
+            }
+            wrapList.add(subList);
+        }
+        return wrapList;
     }
 
     private final static class TreeNode {
