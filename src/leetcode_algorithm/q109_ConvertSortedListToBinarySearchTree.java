@@ -7,6 +7,13 @@ package leetcode_algorithm;
 
 public class q109_ConvertSortedListToBinarySearchTree {
 
+
+    /**
+     * ½â·¨1
+     *
+     * @param head
+     * @return
+     */
     public TreeNode sortedListToBST(ListNode head) {
         if (head == null) return null;
         return toBST(head, null);
