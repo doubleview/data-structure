@@ -27,7 +27,7 @@ public class q126_WordLadder2 {
 
     public static void main(String[] args) {
         q126_WordLadder2 solution = new q126_WordLadder2();
-        System.out.println(solution.findLadders("hit" , "cog" , new HashSet<>(Arrays.asList("hot","dot","dog","lot","log","cog"))));
+        System.out.println(solution.findLadders("hit" , "cog" , Arrays.asList("hot","dot","dog","lot","log","cog")));
 
     }
 
@@ -45,10 +45,10 @@ public class q126_WordLadder2 {
     One word is allowed to be inserted into the queue only ONCE. See my comments.
 
     */
-    public List<List<String>> findLadders(String start, String end, Set<String> dict) {
+    public List<List<String>> findLadders(String start, String end, List<String> dict) {
         results = new ArrayList<>();
         if(dict.size() == 0) return results;
-        dict.add(end);
+        //dict.add(end);
 
         int min = Integer.MAX_VALUE;
         map = new HashMap<>();
