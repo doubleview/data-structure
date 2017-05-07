@@ -1,6 +1,5 @@
 package leetcode_algorithm;
 
-import java.awt.event.HierarchyBoundsAdapter;
 import java.util.Arrays;
 
 /**
