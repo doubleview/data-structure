@@ -19,8 +19,8 @@ public class q141_LinkedListCycle {
      */
     public boolean hasCycle(ListNode head) {
         if(head == null) return false;
-        ListNode walker = null;
-        ListNode runner = null;
+        ListNode walker = head;
+        ListNode runner = head;
         while (runner.next != null && runner.next.next != null) {
             walker = walker.next;
             runner = runner.next.next;
